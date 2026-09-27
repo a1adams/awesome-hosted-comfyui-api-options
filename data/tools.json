@@ -1,0 +1,229 @@
+{
+  "keyword": "hosted comfyui alternative with api",
+  "title": "Hosted ComfyUI API options and alternative deployment models",
+  "lastChecked": "2026-09-27",
+  "capabilityChecks": [
+    {
+      "key": "restApi",
+      "label": "REST API"
+    },
+    {
+      "key": "workflowExecutionApi",
+      "label": "Workflow execution API"
+    },
+    {
+      "key": "visualGraph",
+      "label": "Visual graph"
+    },
+    {
+      "key": "selfHostedRuntime",
+      "label": "Self-hosted runtime"
+    }
+  ],
+  "tools": [
+    {
+      "n": 1,
+      "name": "RunComfy",
+      "tagline": null,
+      "homepage": "https://www.runcomfy.com",
+      "docs": "https://docs.runcomfy.com",
+      "pricing": null,
+      "claudeConnection": "Official MCP for deployments",
+      "restApi": true,
+      "modelSupport": "Image operations; see documented model and format support",
+      "freeTier": "unverified",
+      "repo": null,
+      "note": "Documentation review 2026-09-21; product/account behaviour was not tested.",
+      "quickstart": [
+        {
+          "label": "Setup reference: follow the official authentication and request guide. This is a documentation URL, not an executed API example.",
+          "lang": "text",
+          "code": "https://docs.runcomfy.com"
+        }
+      ],
+      "capabilities": {
+        "restApi": true,
+        "workflowExecutionApi": true,
+        "visualGraph": true,
+        "selfHostedRuntime": null
+      },
+      "live": {
+        "stars": null,
+        "lastPush": null,
+        "latestRelease": null,
+        "latestReleaseDate": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "n": 2,
+      "name": "ComfyDeploy",
+      "tagline": null,
+      "homepage": "https://www.comfydeploy.com",
+      "docs": "https://docs.comfydeploy.com/docs/introduction",
+      "pricing": null,
+      "claudeConnection": null,
+      "restApi": true,
+      "modelSupport": "Image operations; see documented model and format support",
+      "freeTier": "unverified",
+      "repo": null,
+      "note": "Documentation review 2026-09-21; product/account behaviour was not tested.",
+      "quickstart": [
+        {
+          "label": "Setup reference: follow the official authentication and request guide. This is a documentation URL, not an executed API example.",
+          "lang": "text",
+          "code": "https://docs.comfydeploy.com/docs/introduction"
+        }
+      ],
+      "capabilities": {
+        "restApi": true,
+        "workflowExecutionApi": true,
+        "visualGraph": true,
+        "selfHostedRuntime": null
+      },
+      "live": {
+        "stars": null,
+        "lastPush": null,
+        "latestRelease": null,
+        "latestReleaseDate": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "n": 3,
+      "name": "ComfyUI",
+      "tagline": null,
+      "homepage": "https://www.comfy.org",
+      "docs": "https://docs.comfy.org",
+      "pricing": null,
+      "claudeConnection": null,
+      "restApi": true,
+      "modelSupport": "Image and video operations; model coverage varies",
+      "freeTier": "unverified",
+      "repo": "Comfy-Org/ComfyUI",
+      "note": "Documentation review 2026-09-21; product/account behaviour was not tested. ComfyUI has both local and hosted routes. Downloadable software does not make GPU use, hosted services or every model licence free.",
+      "quickstart": [
+        {
+          "label": "Setup reference: follow the official authentication and request guide. This is a documentation URL, not an executed API example.",
+          "lang": "text",
+          "code": "https://docs.comfy.org"
+        }
+      ],
+      "capabilities": {
+        "restApi": true,
+        "workflowExecutionApi": true,
+        "visualGraph": true,
+        "selfHostedRuntime": true
+      },
+      "live": {
+        "stars": 135125,
+        "lastPush": "2026-09-27T02:49:47Z",
+        "latestRelease": "v0.37.0",
+        "latestReleaseDate": "2026-09-21",
+        "checkedAt": "2026-09-27"
+      }
+    },
+    {
+      "n": 4,
+      "name": "Wireflow",
+      "tagline": null,
+      "homepage": "https://www.wireflow.ai/comfyui-alternative",
+      "docs": "https://www.wireflow.ai/docs",
+      "pricing": "https://www.wireflow.ai/pricing",
+      "claudeConnection": "Hosted MCP; see official connector setup",
+      "restApi": true,
+      "modelSupport": "Image and video operations; model coverage varies",
+      "freeTier": "unverified",
+      "repo": null,
+      "note": "Documentation review 2026-09-21; product/account behaviour was not tested.",
+      "quickstart": [
+        {
+          "label": "Setup reference: follow the official authentication and request guide. This is a documentation URL, not an executed API example.",
+          "lang": "text",
+          "code": "https://www.wireflow.ai/docs"
+        }
+      ],
+      "capabilities": {
+        "restApi": true,
+        "workflowExecutionApi": true,
+        "visualGraph": true,
+        "selfHostedRuntime": null
+      },
+      "live": {
+        "stars": null,
+        "lastPush": null,
+        "latestRelease": null,
+        "latestReleaseDate": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "n": 5,
+      "name": "Replicate",
+      "tagline": null,
+      "homepage": "https://replicate.com",
+      "docs": "https://replicate.com/docs",
+      "pricing": "https://replicate.com/pricing",
+      "claudeConnection": null,
+      "restApi": true,
+      "modelSupport": "Image and video operations; model coverage varies",
+      "freeTier": "unverified",
+      "repo": null,
+      "note": "Documentation review 2026-09-21; product/account behaviour was not tested.",
+      "quickstart": [
+        {
+          "label": "Setup reference: follow the official authentication and request guide. This is a documentation URL, not an executed API example.",
+          "lang": "text",
+          "code": "https://replicate.com/docs"
+        }
+      ],
+      "capabilities": {
+        "restApi": true,
+        "workflowExecutionApi": null,
+        "visualGraph": null,
+        "selfHostedRuntime": null
+      },
+      "live": {
+        "stars": null,
+        "lastPush": null,
+        "latestRelease": null,
+        "latestReleaseDate": null,
+        "checkedAt": null
+      }
+    },
+    {
+      "n": 6,
+      "name": "fal",
+      "tagline": null,
+      "homepage": "https://fal.ai",
+      "docs": "https://fal.ai/docs/documentation",
+      "pricing": null,
+      "claudeConnection": null,
+      "restApi": true,
+      "modelSupport": "Image and video operations; model coverage varies",
+      "freeTier": "unverified",
+      "repo": null,
+      "note": "Documentation review 2026-09-21; product/account behaviour was not tested.",
+      "quickstart": [
+        {
+          "label": "Setup reference: follow the official authentication and request guide. This is a documentation URL, not an executed API example.",
+          "lang": "text",
+          "code": "https://fal.ai/docs/documentation"
+        }
+      ],
+      "capabilities": {
+        "restApi": true,
+        "workflowExecutionApi": null,
+        "visualGraph": null,
+        "selfHostedRuntime": null
+      },
+      "live": {
+        "stars": null,
+        "lastPush": null,
+        "latestRelease": null,
+        "latestReleaseDate": null,
+        "checkedAt": null
+      }
+    }
+  ]
+}
