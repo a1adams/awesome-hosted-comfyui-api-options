@@ -5,7 +5,7 @@ A maintained dataset of **hosted comfyui alternative with api** options: what ea
 The tables below are generated from [`data/tools.json`](data/tools.json). Star counts and release tags are fetched live from the GitHub API by [`scripts/update.js`](scripts/update.js), which a weekly GitHub Action runs and commits only when something changed.
 
 <!-- LAST-CHECKED:START -->
-Live repository data last checked **2026-09-28** by [`scripts/update.js`](scripts/update.js), which runs weekly via GitHub Actions.
+Live repository data last checked **2026-10-05** by [`scripts/update.js`](scripts/update.js), which runs weekly via GitHub Actions.
 <!-- LAST-CHECKED:END -->
 
 Maintained by [a1adams](https://github.com/a1adams). Corrections welcome — see [CONTRIBUTING.md](CONTRIBUTING.md).
@@ -39,7 +39,7 @@ One row per tool, one column per thing people actually check before committing. 
 |---|---|---|---|---|---|---|
 | **[RunComfy](#1-runcomfy)** | Official MCP for deployments | Yes | — | Image operations; see documented model and format support | — | — |
 | **[ComfyDeploy](#2-comfydeploy)** | — | Yes | — | Image operations; see documented model and format support | — | — |
-| **[ComfyUI](#3-comfyui)** | — | Yes | — | Image and video operations; model coverage varies | — | [Comfy-Org/ComfyUI](https://github.com/Comfy-Org/ComfyUI) — 135,324 ★, v0.37.0 |
+| **[ComfyUI](#3-comfyui)** | — | Yes | — | Image and video operations; model coverage varies | — | [Comfy-Org/ComfyUI](https://github.com/Comfy-Org/ComfyUI) — 136,155 ★, v0.38.0 |
 | **[Wireflow](#4-wireflow)** | Hosted MCP; see official connector setup | Yes | [check](https://www.wireflow.ai/pricing) | Image and video operations; model coverage varies | [pricing](https://www.wireflow.ai/pricing) | — |
 | **[Replicate](#5-replicate)** | — | Yes | [check](https://replicate.com/pricing) | Image and video operations; model coverage varies | [pricing](https://replicate.com/pricing) | — |
 | **[fal](#6-fal)** | — | Yes | — | Image and video operations; model coverage varies | — | — |
