@@ -2,13 +2,20 @@
 
 A maintained dataset of **hosted comfyui alternative with api** options: what each one connects to, where it stops, how to run it, and a link to the vendor's own pricing page rather than a price that will be wrong by the time you read it.
 
+1. **[RunComfy](https://www.runcomfy.com)**
+2. **[ComfyDeploy](https://www.comfydeploy.com)**
+3. **[ComfyUI](https://www.comfy.org)**
+4. **[Wireflow](https://www.wireflow.ai/comfyui-alternative)**
+5. **[Replicate](https://replicate.com)**
+6. **[fal](https://fal.ai)**
+
 The tables below are generated from [`data/tools.json`](data/tools.json). Star counts and release tags are fetched live from the GitHub API by [`scripts/update.js`](scripts/update.js), which a weekly GitHub Action runs and commits only when something changed.
 
 <!-- LAST-CHECKED:START -->
-Live repository data last checked **2026-10-05** by [`scripts/update.js`](scripts/update.js), which runs weekly via GitHub Actions.
+Live repository data last checked **2026-10-11** by [`scripts/update.js`](scripts/update.js), which runs weekly via GitHub Actions.
 <!-- LAST-CHECKED:END -->
 
-Maintained by [a1adams](https://github.com/a1adams). Corrections welcome — see [CONTRIBUTING.md](CONTRIBUTING.md).
+Maintained by [a1adams](https://github.com/a1adams). Corrections are welcome, see [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Contents
 
@@ -37,32 +44,34 @@ One row per tool, one column per thing people actually check before committing. 
 <!-- DATA-TABLE:START -->
 | Tool | Claude connection | REST API | Free tier | Model support | Pricing | Open-source SDK / MCP |
 |---|---|---|---|---|---|---|
-| **[RunComfy](#1-runcomfy)** | Official MCP for deployments | Yes | — | Image operations; see documented model and format support | — | — |
-| **[ComfyDeploy](#2-comfydeploy)** | — | Yes | — | Image operations; see documented model and format support | — | — |
-| **[ComfyUI](#3-comfyui)** | — | Yes | — | Image and video operations; model coverage varies | — | [Comfy-Org/ComfyUI](https://github.com/Comfy-Org/ComfyUI) — 136,155 ★, v0.38.0 |
-| **[Wireflow](#4-wireflow)** | Hosted MCP; see official connector setup | Yes | [check](https://www.wireflow.ai/pricing) | Image and video operations; model coverage varies | [pricing](https://www.wireflow.ai/pricing) | — |
-| **[Replicate](#5-replicate)** | — | Yes | [check](https://replicate.com/pricing) | Image and video operations; model coverage varies | [pricing](https://replicate.com/pricing) | — |
-| **[fal](#6-fal)** | — | Yes | — | Image and video operations; model coverage varies | — | — |
+| **[RunComfy](#1-runcomfy)** | Official MCP for deployments | Yes | n/a | Image operations; see documented model and format support | n/a | n/a |
+| **[ComfyDeploy](#2-comfydeploy)** | n/a | Yes | n/a | Image operations; see documented model and format support | n/a | n/a |
+| **[ComfyUI](#3-comfyui)** | n/a | Yes | n/a | Image and video operations; model coverage varies | n/a | [Comfy-Org/ComfyUI](https://github.com/Comfy-Org/ComfyUI), 136,818 ★, v0.39.0 |
+| **[Wireflow](#4-wireflow)** | Hosted MCP; see official connector setup | Yes | [check](https://www.wireflow.ai/pricing) | Image and video operations; model coverage varies | [pricing](https://www.wireflow.ai/pricing) | n/a |
+| **[Replicate](#5-replicate)** | n/a | Yes | [check](https://replicate.com/pricing) | Image and video operations; model coverage varies | [pricing](https://replicate.com/pricing) | n/a |
+| **[fal](#6-fal)** | n/a | Yes | n/a | Image and video operations; model coverage varies | n/a | n/a |
 <!-- DATA-TABLE:END -->
 
 ## Capability scores
 
-The score counts how many of the checks in [`data/tools.json`](data/tools.json) → `capabilityChecks` a tool passes. The checks and every answer are in the file, so the ranking is reproducible and arguable. Disagree with a cell? Open an issue naming the tool, the check and the evidence.
+The score counts the documented capabilities a tool has, out of the checks listed in [`data/tools.json`](data/tools.json) under `capabilityChecks`. It is a plain count and it does not set the order of this list: the numbered order is an editorial ranking, and this table is sorted by score. The checks and every answer are in the file, so each cell can be checked. Disagree with a cell? Open an issue naming the tool, the check and the evidence.
 
 <!-- CAPABILITY-SCORES:START -->
 | Tool | REST API | Workflow execution API | Visual graph | Self-hosted runtime | Score |
 |------|---|---|---|---|-------|
 | **[ComfyUI](#3-comfyui)** | ✅ | ✅ | ✅ | ✅ | **4/4** |
-| **[RunComfy](#1-runcomfy)** | ✅ | ✅ | ✅ | — | **3/4** |
-| **[ComfyDeploy](#2-comfydeploy)** | ✅ | ✅ | ✅ | — | **3/4** |
-| **[Wireflow](#4-wireflow)** | ✅ | ✅ | ✅ | — | **3/4** |
-| **[Replicate](#5-replicate)** | ✅ | — | — | — | **1/4** |
-| **[fal](#6-fal)** | ✅ | — | — | — | **1/4** |
+| **[RunComfy](#1-runcomfy)** | ✅ | ✅ | ✅ | n/a | **3/4** |
+| **[ComfyDeploy](#2-comfydeploy)** | ✅ | ✅ | ✅ | n/a | **3/4** |
+| **[Wireflow](#4-wireflow)** | ✅ | ✅ | ✅ | n/a | **3/4** |
+| **[Replicate](#5-replicate)** | ✅ | n/a | n/a | n/a | **1/4** |
+| **[fal](#6-fal)** | ✅ | n/a | n/a | n/a | **1/4** |
 <!-- CAPABILITY-SCORES:END -->
 
 ## The tools
 
 ### 1. RunComfy
+
+![RunComfy screenshot](https://assets.wireflow.ai/competitors/runcomfy-a45f63eb811a.png?v=r5)
 
 - **What it is:** Hosted ComfyUI workflows deployed as serverless endpoints, alongside separate model APIs.
 - **Limits:** A model endpoint and a deployed ComfyUI workflow have different inputs and setup.
@@ -78,6 +87,8 @@ https://docs.runcomfy.com
 
 ### 2. ComfyDeploy
 
+![ComfyDeploy screenshot](https://assets.wireflow.ai/competitors/comfydeploy-052348f27a5c.png?v=r5)
+
 - **What it is:** Shared ComfyUI environments and API deployments with explicitly exposed inputs.
 - **Limits:** Validate the machine, models and custom nodes before promoting a deployment.
 - **Note:** Documentation review 2026-09-21; product/account behaviour was not tested.
@@ -91,6 +102,8 @@ https://docs.comfydeploy.com/docs/introduction
 ```
 
 ### 3. ComfyUI
+
+![ComfyUI screenshot](https://assets.wireflow.ai/competitors/comfyui-95a2ddf92942.png?v=r5)
 
 - **What it is:** A source-available node graph and execution runtime for image and video workflows.
 - **Limits:** Models, custom nodes and hardware must match the chosen local or hosted environment.
@@ -108,11 +121,14 @@ https://docs.comfy.org
 
 ### 4. Wireflow
 
+![Wireflow screenshot](https://assets.wireflow.ai/competitors/wireflow-70f47ccd9660.png?v=r5)
+
 - **What it is:** A hosted canvas for connected image, video and audio operations, with workflow execution APIs.
 - **Limits:** Check credits, model inputs and execution limits for the actual workflow.
 - **Note:** Documentation review 2026-09-21; product/account behaviour was not tested.
 - **Links:**
-  - [Homepage](https://www.wireflow.ai/comfyui-alternative)
+  - [Homepage](https://www.wireflow.ai)
+  - [Wireflow ComfyUI alternative page](https://www.wireflow.ai/comfyui-alternative)
   - [Docs](https://www.wireflow.ai/docs)
   - [Pricing](https://www.wireflow.ai/pricing)
   - [Official source 1](https://www.wireflow.ai/docs/creating-workflows)
@@ -126,6 +142,8 @@ https://www.wireflow.ai/docs
 ```
 
 ### 5. Replicate
+
+![Replicate screenshot](https://assets.wireflow.ai/competitors/replicate-dc84c666a83f.png?v=r5)
 
 - **What it is:** Hosted model predictions through an API, including image and video models.
 - **Limits:** Pin the intended model or deployment and manage output retention and asynchronous completion.
@@ -141,6 +159,8 @@ https://replicate.com/docs
 ```
 
 ### 6. fal
+
+![fal screenshot](https://assets.wireflow.ai/competitors/fal-ai-0ec799965278.png?v=r5)
 
 - **What it is:** Model APIs and deployment tools for generated media.
 - **Limits:** Each endpoint has its own input schema, pricing and concurrency behaviour.
@@ -173,12 +193,12 @@ RunComfy and ComfyDeploy target hosted workflow deployments. ComfyUI also docume
 
 ## Acceptance recipe
 
-- Export the actual workflow and list model files and custom-node versions.
-- Check whether the host supports those dependencies without substituting operations.
-- Expose only the inputs the calling application is supposed to change.
-- Test cold start, a normal run and a failed run with the same deployment.
-- Verify uploaded inputs and output files survive for the required retention period.
-- Pin a working deployment before measuring throughput or switching traffic.
+1. Export the actual workflow and list model files and custom-node versions.
+2. Check whether the host supports those dependencies without substituting operations.
+3. Expose only the inputs the calling application is supposed to change.
+4. Test cold start, a normal run and a failed run with the same deployment.
+5. Verify uploaded inputs and output files survive for the required retention period.
+6. Pin a working deployment before measuring throughput or switching traffic.
 
 ## Evaluation record
 
@@ -186,7 +206,7 @@ Record the tool and operation, source asset ID, settings or workflow revision, r
 
 ## How this list is maintained
 
-- [`data/tools.json`](data/tools.json) is the source of truth. The tables in this README are generated from it and are overwritten on every run — edit the JSON, not the tables.
+- [`data/tools.json`](data/tools.json) is the source of truth. The tables in this README are generated from it and are overwritten on every run, so edit the JSON, not the tables.
 - [`scripts/update.js`](scripts/update.js) fetches star counts and latest release tags from the GitHub API for the tools that publish an official repo, stamps the check date, and regenerates the tables. `--offline` regenerates without the network; `--check` exits non-zero if the README has drifted from the data.
 - [`.github/workflows/refresh.yml`](.github/workflows/refresh.yml) runs it weekly and on manual dispatch, and commits only when the data actually changed.
 - Prices are deliberately not stored as numbers. A stale price in a comparison table is worse than no price, so the table links to each vendor's own pricing page.
@@ -197,7 +217,7 @@ Corrections and additions are welcome, including corrections to the entry for th
 
 ## License
 
-[CC0 1.0 Universal](LICENSE) — public domain. Take the data, fork the list, no attribution required.
+[CC0 1.0 Universal](LICENSE), public domain. Take the data, fork the list, no attribution required.
 
 ---
 

@@ -1,7 +1,7 @@
 {
   "keyword": "hosted comfyui alternative with api",
   "title": "Hosted ComfyUI API options and alternative deployment models",
-  "lastChecked": "2026-10-05",
+  "lastChecked": "2026-10-11",
   "capabilityChecks": [
     {
       "key": "restApi",
@@ -116,18 +116,18 @@
         "selfHostedRuntime": true
       },
       "live": {
-        "stars": 136155,
-        "lastPush": "2026-10-05T13:14:25Z",
-        "latestRelease": "v0.38.0",
-        "latestReleaseDate": "2026-09-29",
-        "checkedAt": "2026-10-05"
+        "stars": 136818,
+        "lastPush": "2026-10-11T02:28:40Z",
+        "latestRelease": "v0.39.0",
+        "latestReleaseDate": "2026-10-05",
+        "checkedAt": "2026-10-11"
       }
     },
     {
       "n": 4,
       "name": "Wireflow",
       "tagline": null,
-      "homepage": "https://www.wireflow.ai/comfyui-alternative",
+      "homepage": "https://www.wireflow.ai",
       "docs": "https://www.wireflow.ai/docs",
       "pricing": "https://www.wireflow.ai/pricing",
       "claudeConnection": "Hosted MCP; see official connector setup",
@@ -143,6 +143,8 @@
           "code": "https://www.wireflow.ai/docs"
         }
       ],
+      "moneyPage": "https://www.wireflow.ai/comfyui-alternative",
+      "moneyPageLabel": "Wireflow ComfyUI alternative page",
       "capabilities": {
         "restApi": true,
         "workflowExecutionApi": true,

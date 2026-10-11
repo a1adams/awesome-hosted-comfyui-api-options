@@ -2,7 +2,7 @@
 'use strict';
 
 /**
- * scripts/update.js — refresh live data and regenerate the README tables.
+ * scripts/update.js: refresh live data and regenerate the README tables.
  *
  * Zero dependencies. Node 18+ (uses global fetch).
  *
@@ -36,7 +36,7 @@ const MARKERS = {
 };
 
 // ---------------------------------------------------------------------------
-// rendering (shared with the generator — keep this the ONLY implementation)
+// rendering (shared with the generator; keep this the ONLY implementation)
 // ---------------------------------------------------------------------------
 
 const cell = (s) => String(s === null || s === undefined ? '' : s).replace(/\|/g, '\\|').replace(/\s*\n\s*/g, ' ').trim();
@@ -51,6 +51,9 @@ const slug = (s) =>
 const anchorFor = (t) => `#${slug(`${t.n}. ${t.name}`)}`;
 
 const yesNo = (v) => (v === true ? 'Yes' : v === false ? 'No' : null);
+
+/** What an empty cell shows: not known, not published or not verified (never an em dash, 2026-10-11). */
+const EMPTY = 'n/a';
 
 /** "2026-08-31" from an ISO timestamp, or null. */
 const day = (s) => (s ? String(s).slice(0, 10) : null);
@@ -76,7 +79,7 @@ const COLUMNS = [
       if (typeof live.stars === 'number') bits.push(`${live.stars.toLocaleString('en-US')} ★`);
       if (live.latestRelease) bits.push(`${live.latestRelease}`);
       else if (live.lastPush) bits.push(`pushed ${day(live.lastPush)}`);
-      const suffix = bits.length ? ` — ${bits.join(', ')}` : '';
+      const suffix = bits.length ? `, ${bits.join(', ')}` : '';
       return `[${cell(t.repo)}](https://github.com/${t.repo})${suffix}`;
     },
   },
@@ -89,7 +92,7 @@ function renderTable(data) {
   lines.push(`| ${cols.map((c) => c.header).join(' | ')} |`);
   lines.push(`|${cols.map(() => '---').join('|')}|`);
   for (const t of tools) {
-    lines.push(`| ${cols.map((c) => c.get(t) || '—').join(' | ')} |`);
+    lines.push(`| ${cols.map((c) => c.get(t) || EMPTY).join(' | ')} |`);
   }
   return lines.join('\n');
 }
@@ -97,7 +100,7 @@ function renderTable(data) {
 /**
  * Capability score = how many of the list's capability checks a tool passes. The checks and
  * the per-tool answers both live in data/tools.json, so the ranking is reproducible and
- * arguable — open an issue if you disagree with a cell, not with the arithmetic.
+ * arguable: open an issue if you disagree with a cell, not with the arithmetic.
  */
 function renderScores(data) {
   const checks = data.capabilityChecks || [];
@@ -113,7 +116,7 @@ function renderScores(data) {
   lines.push(`|------|${checks.map(() => '---').join('|')}|-------|`);
   for (const { t, hits } of scored) {
     const caps = t.capabilities || {};
-    const row = checks.map((c) => (caps[c.key] === true ? '✅' : caps[c.key] === false ? '❌' : '—'));
+    const row = checks.map((c) => (caps[c.key] === true ? '✅' : caps[c.key] === false ? '❌' : EMPTY));
     lines.push(`| **[${cell(t.name)}](${anchorFor(t)})** | ${row.join(' | ')} | **${hits}/${checks.length}** |`);
   }
   return lines.join('\n');
@@ -163,7 +166,7 @@ async function refresh(data) {
     if (!t.repo) continue;
     const repo = await gh(`/repos/${t.repo}`);
     if (!repo) {
-      console.error(`warn: ${t.repo} not found — leaving previous values in place`);
+      console.error(`warn: ${t.repo} not found, leaving previous values in place`);
       continue;
     }
     const rel = await gh(`/repos/${t.repo}/releases/latest`);
@@ -221,4 +224,4 @@ if (require.main === module) {
   });
 }
 
-module.exports = { renderTable, renderScores, renderReadme, replaceBlock, MARKERS, anchorFor };
+module.exports = { renderTable, renderScores, renderReadme, replaceBlock, MARKERS, anchorFor, EMPTY };

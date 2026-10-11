@@ -36,7 +36,7 @@ body:
     id: repo
     attributes:
       label: Public GitHub repo (owner/name)
-      description: An official SDK, CLI or MCP server. Leave blank if there is none — that is a normal answer.
+      description: An official SDK, CLI or MCP server. Leave blank if there is none, which is a normal answer.
       placeholder: owner/name
   - type: textarea
     id: what
