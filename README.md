@@ -12,7 +12,7 @@ A maintained dataset of **hosted comfyui alternative with api** options: what ea
 The tables below are generated from [`data/tools.json`](data/tools.json). Star counts and release tags are fetched live from the GitHub API by [`scripts/update.js`](scripts/update.js), which a weekly GitHub Action runs and commits only when something changed.
 
 <!-- LAST-CHECKED:START -->
-Live repository data last checked **2026-10-12** by [`scripts/update.js`](scripts/update.js), which runs weekly via GitHub Actions.
+Live repository data last checked **2026-10-19** by [`scripts/update.js`](scripts/update.js), which runs weekly via GitHub Actions.
 <!-- LAST-CHECKED:END -->
 
 Maintained by [a1adams](https://github.com/a1adams). Corrections are welcome, see [CONTRIBUTING.md](CONTRIBUTING.md).
@@ -46,7 +46,7 @@ One row per tool, one column per thing people actually check before committing. 
 |---|---|---|---|---|---|---|
 | **[RunComfy](#1-runcomfy)** | Official MCP for deployments | Yes | n/a | Image operations; see documented model and format support | n/a | n/a |
 | **[ComfyDeploy](#2-comfydeploy)** | n/a | Yes | n/a | Image operations; see documented model and format support | n/a | n/a |
-| **[ComfyUI](#3-comfyui)** | n/a | Yes | n/a | Image and video operations; model coverage varies | n/a | [Comfy-Org/ComfyUI](https://github.com/Comfy-Org/ComfyUI), 137,101 ★, v0.39.0 |
+| **[ComfyUI](#3-comfyui)** | n/a | Yes | n/a | Image and video operations; model coverage varies | n/a | [Comfy-Org/ComfyUI](https://github.com/Comfy-Org/ComfyUI), 139,219 ★, v0.42.1 |
 | **[Wireflow](#4-wireflow)** | Hosted MCP; see official connector setup | Yes | [check](https://www.wireflow.ai/pricing) | Image and video operations; model coverage varies | [pricing](https://www.wireflow.ai/pricing) | n/a |
 | **[Replicate](#5-replicate)** | n/a | Yes | [check](https://replicate.com/pricing) | Image and video operations; model coverage varies | [pricing](https://replicate.com/pricing) | n/a |
 | **[fal](#6-fal)** | n/a | Yes | n/a | Image and video operations; model coverage varies | n/a | n/a |
