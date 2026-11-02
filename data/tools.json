@@ -1,7 +1,7 @@
 {
   "keyword": "hosted comfyui alternative with api",
   "title": "Hosted ComfyUI API options and alternative deployment models",
-  "lastChecked": "2026-10-26",
+  "lastChecked": "2026-11-02",
   "capabilityChecks": [
     {
       "key": "restApi",
@@ -116,11 +116,11 @@
         "selfHostedRuntime": true
       },
       "live": {
-        "stars": 143131,
-        "lastPush": "2026-10-26T12:52:32Z",
-        "latestRelease": "v0.42.1",
-        "latestReleaseDate": "2026-10-19",
-        "checkedAt": "2026-10-26"
+        "stars": 144615,
+        "lastPush": "2026-11-02T14:02:09Z",
+        "latestRelease": "v0.43.0",
+        "latestReleaseDate": "2026-10-27",
+        "checkedAt": "2026-11-02"
       }
     },
     {
